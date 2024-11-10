@@ -13,7 +13,7 @@
 
 body {
   font-family: 'Nexa-Bold', sans-serif;
-  background: radial-gradient(circle, #6C6C6C , #2B2B2B );  display: flex;
+  background: radial-gradient(circle, #383838 , #2e2e2e );  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
