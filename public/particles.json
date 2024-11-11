@@ -17,7 +17,7 @@
         "color": "#000000"
       },
       "polygon": {
-        "nb_sides": 3
+        "nb_sides": 5
       },
       "image": {
         "src": "img/github.svg",
@@ -36,11 +36,11 @@
       }
     },
     "size": {
-      "value": 4,
+      "value": 5,
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 80,
+        "speed": 40,
         "size_min": 0.1,
         "sync": false
       }
@@ -91,7 +91,7 @@
         "size": 40,
         "duration": 2,
         "opacity": 8,
-        "speed": 4
+        "speed": 3
       },
       "repulse": {
         "distance": 200
