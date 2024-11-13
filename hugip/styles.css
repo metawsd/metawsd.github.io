@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Nexa-Bold';
+  src: url('fonts/Nexa-Bold.otf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Nexa-Bold', sans-serif;
+  background: radial-gradient(circle, #100c7d , #080726 );  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  cursor: url('img/hugip3.png'), auto;
+}
+
+body, html {
+  overflow: hidden; 
+  height: 100%;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Mouse etkileşimini sağlamak için */
+}
+
+
+.container {
+  width: 1440px;
+  height: 1024px;
+  display: flex;
+  position: relative;
+  z-index: -1;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
+}
+
+.box {
+  width: 800.99px;
+  height: 450.41px;
+  z-index: 1; /* Öne çıkması için */
+  position: relative;
+  background: linear-gradient(180deg, #b8476a, #850c38 ); /* Linear Gradient */
+  border-radius: 69px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profil Resmi */
+.profile-img {
+  width: 225px;  
+  height: 225px;
+  border-radius: 15%;
+  object-fit: cover;
+  position: absolute;
+  top: 67px;
+  left: auto;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.5)); /* Şekle göre gölge */
+}
+
+.title {
+  color: white;
+  font-size: 40px;
+  font-family: 'Nexa-Bold', sans-serif;
+  font-weight: 400;
+  position: absolute;
+  top: 301px;
+  left: auto;
+}
+
+.icons {
+  width: 85.02px;
+  height: 38.92px;
+  position: absolute;
+  bottom: 50px;
+  left: auto;
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  gap: 10px; 
+}
+
+.icon {
+  width: 38px;  
+  height: 38px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* Simge 2 (Behance) */
+.icon-small {
+  width: 38px; 
+  height: 25px; 
+  object-fit: contain;  
+  transition: all 0.3s ease;
+}
+
+.icons .icon:hover, .icons .icon-small:hover {
+  width: 50px;  
+  height: 50px; 
+  cursor: pointer;
+}
+
+.copyright {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 10px;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
