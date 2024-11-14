@@ -52,7 +52,10 @@ body, html {
   height: 450.41px;
   z-index: 1; /* Öne çıkması için */
   position: relative;
-  background: linear-gradient(180deg, #b8476a, #850c38 ); /* Linear Gradient */
+  background: linear-gradient(180deg, #b8476a, #850c38), url('img/ak.jpg'); /* Gradyan ve Resim */
+  background-size: cover; /* Resmi ve gradyanı tam kutu boyutuna uyacak şekilde ayarla */
+  background-position: center; /* Resmi kutuda ortala */
+  background-repeat: no-repeat; /* Resmin tekrarlanmamasını sağla */
   border-radius: 69px;
   display: flex;
   flex-direction: column;
