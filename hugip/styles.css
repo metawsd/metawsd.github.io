@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-user-drag: none;  /* Safari ve Chrome */
+  -moz-user-drag: none;     /* Firefox */
+  -ms-user-drag: none;      /* Internet Explorer */
+  user-drag: none;          /* Genel destek */
 }
 
 @font-face {
@@ -176,6 +180,8 @@ body, html {
   opacity: 0.2; /* Sadece arka plan resminin opaklığını ayarlar */
   z-index: -1; /* Diğer içeriklerin arkasına alır */
 }
+
+
 
 /* Mobil için media query */
 @media (max-width: 767px) {
