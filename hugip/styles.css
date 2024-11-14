@@ -125,50 +125,47 @@ body, html {
   padding: 5px 10px;
   border-radius: 5px;
 }
-/////////////////////////////////////////////
-/* Mobil versiyon için stil değişiklikleri */
+
+/* Mobil için media query */
 @media (max-width: 767px) {
   .box {
-    width: 90%; /* Genişlik: Ekranın %90'ı kadar */
-    height: 350px; /* Yüksekliği küçültüyoruz */
-    margin: 0 auto; /* Ortalamak için */
-    padding: 20px; /* İçeriğe boşluk ekliyoruz */
-    border-radius: 40px; /* Daha küçük border-radius */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); /* Daha hafif gölge */
-    background: linear-gradient(180deg, #b8476a, #850c38); /* Arka plan gradientini koruyalım */
-    background-size: cover; /* Gradient her zaman kutuyu kaplasın */
-    background-position: center; /* Gradient'in konumunu merkeze yerleştir */
+    width: 90%; /* Kutunun genişliği %90'a küçültülür */
+    height: 350px; /* Yükseklik mobilde küçültülür */
+    margin: 0 auto;
+    padding: 20px; /* Padding küçültülür */
+    border-radius: 40px; /* Kenar yuvarlama azaltılır */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); /* Gölge daha hafif yapılır */
   }
 
   .profile-img {
-    width: 150px;  /* Profil resminin boyutunu küçültme */
+    width: 150px;  /* Profil resmi küçültülür */
     height: 150px;
-    top: 50px;  /* Profil resminin konumunu yeniden ayarlama */
+    top: 50px;  /* Profil resminin pozisyonu güncellenir */
   }
 
   .title {
-    font-size: 16px;  /* Başlık boyutunu küçültme */
-    top: 250px;  /* Başlığın konumunu yeniden ayarlama */
+    font-size: 16px;  /* Başlık font boyutu küçültülür */
+    top: 250px;  /* Başlık pozisyonu güncellenir */
   }
 
   .icons {
-    width: 70px;  /* Iconlar için genişliği azaltma */
+    width: 70px;  /* İkonlar daha küçük yapılır */
     height: 35px;
-    bottom: 30px;  /* Simge konumunu yeniden ayarlama */
+    bottom: 30px;  /* İkon konumu aşağıya kaydırılır */
   }
 
   .icon {
-    width: 30px;  /* Simge boyutunu küçültme */
+    width: 30px;  /* Simge boyutları küçültülür */
     height: 30px;
   }
 
   .icon-small {
-    width: 30px;  /* Küçük simge boyutunu küçültme */
+    width: 30px;  /* Küçük ikon boyutları küçültülür */
     height: 20px;
   }
 
   .copyright {
-    font-size: 8px; /* Copyright yazısının boyutunu küçültme */
-    padding: 3px 8px; /* Padding'i küçültme */
+    font-size: 8px; /* Copyright yazı boyutu küçültülür */
+    padding: 3px 8px; /* Padding küçültülür */
   }
 }
