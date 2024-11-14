@@ -59,6 +59,16 @@ body, html {
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+  
+}
+/* Mobil versiyon için stil değişiklikleri */
+@media (max-width: 767px) {
+  .box {
+    width: 90%;  /* Genişlik: Ekranın %90'ı kadar */
+    height: auto;  /* Yükseklik, içeriğe göre otomatik olarak ayarlanacak */
+    border-radius: 40px;  /* Daha küçük bir border-radius */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);  /* Daha hafif gölge */
+  }
 }
 
 /* Profil Resmi */
