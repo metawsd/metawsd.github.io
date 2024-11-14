@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'Nexa-Bold';
-  src: url('fonts/Nexa-Bold.TTF') format('truetype');
+  src: url('fonts/Nexa-Bold.otf') format('truetype');
   font-weight: lighter;
   font-style: normal;
 }
@@ -78,7 +78,7 @@ body, html {
   font-family: 'Nexa-Bold', sans-serif;
   font-weight: 400;
   position: absolute;
-  top: 301px;
+  top: 305px;
   left: auto;
 }
 
@@ -123,4 +123,62 @@ body, html {
   color: #ffffff;
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+/* Mobil için media query */
+@media (max-width: 767px) {
+  .box {
+    width: 90%; /* Kutunun genişliği %90'a küçültülür */
+    height: 350px; /* Yükseklik mobilde küçültülür */
+    margin: 0 auto;
+    padding: 20px; /* Padding küçültülür */
+    border-radius: 40px; /* Kenar yuvarlama azaltılır */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); /* Gölge daha hafif yapılır */
+  }
+  
+  .background-img {
+    border-radius: 20px; /* Görselin kenarları kutuya uyacak şekilde yuvarlatılır */
+  }
+
+  .profile-img {
+    width: 150px;  /* Profil resmi küçültülür */
+    height: 150px;
+    top: 40px;  /* Profil resminin pozisyonu güncellenir */
+  }
+
+  .title {
+    font-size: 40px;  /* Başlık font boyutu küçültülür */
+    top: 200px;  /* Başlık pozisyonu güncellenir */
+  }
+
+  .title2 {
+    font-size: 16px;  /* Başlık font boyutu küçültülür */
+    top: 233px;  /* Başlık pozisyonu güncellenir */
+  }
+
+  .icons {
+    width: 70px;  /* İkonlar daha küçük yapılır */
+    height: 35px;
+    bottom: 45px;  /* İkon konumu aşağıya kaydırılır */
+  }
+
+  .icon {
+    width: 40px;  /* Simge boyutları küçültülür */
+    height: 40px;
+  }
+
+  .icon-small {
+    width: 40px;  /* Küçük ikon boyutları küçültülür */
+    height: 40px;
+  }
+
+  .tiktok2 {
+    width: 47x;  /* Küçük ikon boyutları küçültülür */
+    height: 47px;
+  }
+
+  .copyright {
+    font-size: 8px; /* Copyright yazı boyutu küçültülür */
+    padding: 3px 8px; /* Padding küçültülür */
+  }
 }

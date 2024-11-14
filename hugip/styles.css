@@ -13,7 +13,7 @@
 
 body {
   font-family: 'Nexa-Bold', sans-serif;
-  background: radial-gradient(circle, #100c7d , #080726 );  display: flex;
+  background: radial-gradient(circle, #100c7d , #080726 ); display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -59,6 +59,7 @@ body, html {
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+  overflow: hidden; /* Kutunun dışına taşmayı engeller */
 }
 
 /* Profil Resmi */
@@ -68,18 +69,29 @@ body, html {
   border-radius: 15%;
   object-fit: cover;
   position: absolute;
-  top: 67px;
+  top: 20px;
   left: auto;
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.5)); /* Şekle göre gölge */
 }
 
 .title {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Nexa-Bold', sans-serif;
   font-weight: 400;
   position: absolute;
-  top: 301px;
+  top: 255px;
+  left: auto;
+  text-align: center;        /* Yatayda ortalar */
+}
+
+.title2 {
+  color: white;
+  font-size: 30px;
+  font-family: 'Nexa-Bold', sans-serif;
+  font-weight: 400;
+  position: absolute;
+  top: 298px;
   left: auto;
   text-align: center;        /* Yatayda ortalar */
 }
@@ -93,27 +105,41 @@ body, html {
   display: flex;
   justify-content: center;  
   align-items: center;     
-  gap: 10px; 
+  gap: 15px; 
 }
 
 .icon {
-  width: 38px;  
-  height: 38px;
+  width: 45px;  
+  height: 45px;
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
-/* Simge 2 (Behance) */
+/* Simge 2 */
 .icon-small {
   width: 38px; 
-  height: 25px; 
+  height: 38px; 
+  object-fit: contain;  
+  transition: all 0.3s ease;
+}
+
+/* Simge 3 */
+.tiktok2 {
+  width: 50px; 
+  height: 50px; 
   object-fit: contain;  
   transition: all 0.3s ease;
 }
 
 .icons .icon:hover, .icons .icon-small:hover {
-  width: 50px;  
-  height: 50px; 
+  width: 60px;  
+  height: 60px; 
+  cursor: pointer;
+}
+
+.icons .tiktok2:hover {
+  width: 70px;  
+  height: 70px; 
   cursor: pointer;
 }
 
@@ -127,6 +153,30 @@ body, html {
   border-radius: 5px;
 }
 
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 69px;
+  opacity: 0.4; /* Sadece arka plan resminin opaklığını ayarlar */
+  z-index: -1; /* Diğer içeriklerin arkasına alır */
+}
+
+.background-img2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 69px;
+  opacity: 0.2; /* Sadece arka plan resminin opaklığını ayarlar */
+  z-index: -1; /* Diğer içeriklerin arkasına alır */
+}
+
 /* Mobil için media query */
 @media (max-width: 767px) {
   .box {
@@ -137,32 +187,46 @@ body, html {
     border-radius: 40px; /* Kenar yuvarlama azaltılır */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); /* Gölge daha hafif yapılır */
   }
+  
+  .background-img {
+    border-radius: 20px; /* Görselin kenarları kutuya uyacak şekilde yuvarlatılır */
+  }
 
   .profile-img {
     width: 150px;  /* Profil resmi küçültülür */
     height: 150px;
-    top: 50px;  /* Profil resminin pozisyonu güncellenir */
+    top: 40px;  /* Profil resminin pozisyonu güncellenir */
   }
 
   .title {
     font-size: 16px;  /* Başlık font boyutu küçültülür */
-    top: 250px;  /* Başlık pozisyonu güncellenir */
+    top: 205px;  /* Başlık pozisyonu güncellenir */
+  }
+
+  .title2 {
+    font-size: 16px;  /* Başlık font boyutu küçültülür */
+    top: 233px;  /* Başlık pozisyonu güncellenir */
   }
 
   .icons {
     width: 70px;  /* İkonlar daha küçük yapılır */
     height: 35px;
-    bottom: 30px;  /* İkon konumu aşağıya kaydırılır */
+    bottom: 45px;  /* İkon konumu aşağıya kaydırılır */
   }
 
   .icon {
-    width: 30px;  /* Simge boyutları küçültülür */
-    height: 30px;
+    width: 40px;  /* Simge boyutları küçültülür */
+    height: 40px;
   }
 
   .icon-small {
-    width: 30px;  /* Küçük ikon boyutları küçültülür */
-    height: 20px;
+    width: 40px;  /* Küçük ikon boyutları küçültülür */
+    height: 40px;
+  }
+
+  .tiktok2 {
+    width: 47x;  /* Küçük ikon boyutları küçültülür */
+    height: 47px;
   }
 
   .copyright {
