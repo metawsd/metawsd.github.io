@@ -128,12 +128,15 @@ body, html {
 /* Mobil versiyon için stil değişiklikleri */
 @media (max-width: 767px) {
   .box {
-    width: 90%;  /* Genişlik: Ekranın %90'ı kadar */
-    height: 350px;  /* Yükseklik de küçültülüyor */
+    width: 90%; /* Genişlik: Ekranın %90'ı kadar */
+    height: 350px; /* Yüksekliği biraz küçültüyoruz */
+    margin: 0 auto; /* Ortalamak için */
+    padding: 30px; /* İçeriğe boşluk ekliyoruz */
     border-radius: 40px; /* Daha küçük border-radius */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); /* Daha hafif gölge */
-    background: linear-gradient(180deg, #b8476a, #850c38); /* Linear Gradient arka planını koruyalım */
-    background-size: cover; /* Arka planın her zaman kutuyu kaplamasını sağlamak */
+    background: linear-gradient(180deg, #b8476a, #850c38); /* Arka plan gradientini koruyalım */
+    background-size: cover; /* Gradient her zaman kutuyu kaplasın */
+    background-position: center; /* Gradient'in konumunu merkeze yerleştir */
   }
 
   .profile-img {
