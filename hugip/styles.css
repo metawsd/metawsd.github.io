@@ -166,8 +166,14 @@ body, html {
     height: 20px;
   }
 
-  .copyright {
-    font-size: 8px; /* Copyright yazısının boyutunu küçültme */
-    padding: 3px 8px; /* Padding'i küçültme */
+.copyright {
+  position: fixed;
+  bottom: 10px;  /* Ekranın altına 10px mesafe */
+  right: 10px;   /* Ekranın sağ tarafına 10px mesafe */
+  font-size: 10px;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 9999; /* Diğer öğelerin üzerinde görünmesini sağlamak */
   }
 }
