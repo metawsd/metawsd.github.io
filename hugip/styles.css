@@ -52,10 +52,7 @@ body, html {
   height: 450.41px;
   z-index: 1; /* Öne çıkması için */
   position: relative;
-  background: linear-gradient(180deg, #b8476a, #850c38), url('img/ak.jpg'); /* Gradyan ve Resim */
-  background-size: cover; /* Resmi ve gradyanı tam kutu boyutuna uyacak şekilde ayarla */
-  background-position: center; /* Resmi kutuda ortala */
-  background-repeat: no-repeat; /* Resmin tekrarlanmamasını sağla */
+  background: linear-gradient(180deg, #b8476a, #850c38 ); /* Linear Gradient */
   border-radius: 69px;
   display: flex;
   flex-direction: column;
@@ -82,10 +79,9 @@ body, html {
   font-family: 'Nexa-Bold', sans-serif;
   font-weight: 400;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Hem yatay hem dikeyde tam ortalar */
-  text-align: center;
+  top: 301px;
+  left: auto;
+  text-align: center;        /* Yatayda ortalar */
 }
 
 .icons {
@@ -98,7 +94,6 @@ body, html {
   justify-content: center;  
   align-items: center;     
   gap: 10px; 
-  
 }
 
 .icon {
