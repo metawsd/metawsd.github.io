@@ -41,3 +41,20 @@
 <script>
     particlesJS.load('particles-js', './public/particles.json')
 </script>
+
+// Sağ Tık Engelleme Scripti
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sağ Tıklama Engelleme</title>
+  <style>
+    /* Diğer CSS kodlarınız */
+  </style>
+  <script>
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault();
+    });
+  </script>
+</head>
+</html>
