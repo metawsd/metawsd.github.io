@@ -82,8 +82,9 @@ body, html {
   font-family: 'Nexa-Bold', sans-serif;
   font-weight: 400;
   position: absolute;
-  top: 301px;
-  left: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Hem yatay hem dikeyde tam ortalar */
 }
 
 .icons {
@@ -96,6 +97,7 @@ body, html {
   justify-content: center;  
   align-items: center;     
   gap: 10px; 
+  
 }
 
 .icon {
