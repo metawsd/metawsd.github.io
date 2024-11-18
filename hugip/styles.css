@@ -5,7 +5,7 @@
   -webkit-user-drag: none;  /* Safari ve Chrome */
   -moz-user-drag: none;     /* Firefox */
   -ms-user-drag: none;      /* Internet Explorer */
-  user-drag: none;          /* Genel destek */
+  -webkit-user-drag: none;   /* Genel destek */
   -webkit-user-select: none; /* Chrome, Safari, Opera */
   -moz-user-select: none;    /* Firefox */
   -ms-user-select: none;     /* Internet Explorer/Edge */
@@ -68,6 +68,7 @@ body, html {
   justify-content: center;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
   overflow: hidden; /* Kutunun dışına taşmayı engeller */
+  margin-bottom: 20px; /* Buton kapsayıcı için boşluk bırak */
 }
 
 /* Profil Resmi */
@@ -99,7 +100,7 @@ body, html {
   font-family: 'Nexa-Bold', sans-serif;
   font-weight: 400;
   position: absolute;
-  top: 298px;
+  top: 302px;
   left: auto;
   text-align: center;        /* Yatayda ortalar */
 }
@@ -113,7 +114,7 @@ body, html {
   display: flex;
   justify-content: center;  
   align-items: center;     
-  gap: 15px; 
+  gap: 20px; 
 }
 
 .icon {
@@ -132,22 +133,56 @@ body, html {
 }
 
 /* Simge 3 */
-.tiktok2 {
+.youtube {
   width: 50px; 
   height: 50px; 
   object-fit: contain;  
   transition: all 0.3s ease;
 }
 
-.icons .icon:hover, .icons .icon-small:hover {
+/* Simge 4 */
+.twitter {
+  width: 30px; 
+  height: 30px; 
+  object-fit: contain;  
+  transition: all 0.3s ease;
+}
+
+/* Simge 5 */
+.linkedin {
+  width: 32px; 
+  height: 32px; 
+  object-fit: contain;  
+  transition: all 0.3s ease;
+}
+
+.icons .icon:hover {
+  width: 62px;  
+  height: 62px; 
+  cursor: pointer;
+}
+
+.icons .icon-small:hover {
   width: 60px;  
   height: 60px; 
   cursor: pointer;
 }
 
-.icons .tiktok2:hover {
+.icons .youtube:hover {
   width: 70px;  
   height: 70px; 
+  cursor: pointer;
+}
+
+.icons .twitter:hover {
+  width: 43px;  
+  height: 43px; 
+  cursor: pointer;
+}
+
+.icons .linkedin:hover {
+  width: 50px;  
+  height: 50px; 
   cursor: pointer;
 }
 
@@ -185,6 +220,57 @@ body, html {
   z-index: -1; /* Diğer içeriklerin arkasına alır */
 }
 
+/* Butonların Kapsayıcısı */
+.button-container {
+  margin-top: 500px; /* Kutudan boşluk */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+  top: 10px; /* Kutunun hemen altında kalması için */
+}
+
+/* Wrapper Kapsayıcı */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Kutular arasında boşluk */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Dikey ortalama */
+  position: absolute; /* Kutunun merkezine yerleşmesi için */
+  top: 28%; /* Sayfanın %50 yüksekliğine yerleştirir */
+  left: 50%; /* Sayfanın %50 genişliğine yerleştirir */
+  transform: translate(-50%, -50%); /* Tam ortalama */
+  gap: 35px; /* Butonlar arasında boşluk bırakır */
+}
+
+/* Butonlar */
+.button {
+  display: inline-block;
+  background-color: #850c38;
+  color: white;
+  padding: 20px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 69px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  transition: all 0.3s ease; /* Geçiş animasyonu */
+}
+
+.button:hover {
+  background-color: #ca1256;
+  transform: scale(1.1); /* %20 büyüt */
+}
+
+
 
 
 /* Mobil için media query */
@@ -209,12 +295,12 @@ body, html {
   }
 
   .title {
-    font-size: 16px;  /* Başlık font boyutu küçültülür */
+    font-size: 20px;  /* Başlık font boyutu küçültülür */
     top: 205px;  /* Başlık pozisyonu güncellenir */
   }
 
   .title2 {
-    font-size: 16px;  /* Başlık font boyutu küçültülür */
+    font-size: 20px;  /* Başlık font boyutu küçültülür */
     top: 233px;  /* Başlık pozisyonu güncellenir */
   }
 
@@ -234,7 +320,17 @@ body, html {
     height: 40px;
   }
 
-  .tiktok2 {
+  .youtube {
+    width: 47x;  /* Küçük ikon boyutları küçültülür */
+    height: 47px;
+  }
+
+  .twitter {
+    width: 47x;  /* Küçük ikon boyutları küçültülür */
+    height: 47px;
+  }
+
+  .linkedin {
     width: 47x;  /* Küçük ikon boyutları küçültülür */
     height: 47px;
   }
@@ -243,4 +339,21 @@ body, html {
     font-size: 8px; /* Copyright yazı boyutu küçültülür */
     padding: 3px 8px; /* Padding küçültülür */
   }
+
+  .button-container {
+    display: flex;
+    flex-direction: column; /* Butonları dikey yerleştiriyoruz */
+    gap: 27px;              /* Butonlar arasına boşluk ekliyoruz */
+    width: 100%;            /* Buton kapsayıcısı tam genişlikte */
+    align-items: center;    /* Yatayda ortalıyoruz */
+    justify-content: center; /* Dikeyde ortalıyoruz */
+    padding: 0 10px;        /* Butonlar arasına biraz padding ekliyoruz */
+  }
+
+  .button {
+    width: 80%;           /* Butonları %100 genişlikte yapıyoruz */
+    padding: 20px 0;       /* İç boşlukları artırıyoruz */
+    font-size: 20px;       /* Font boyutunu artırıyoruz */
+  }
+
 }
